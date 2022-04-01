@@ -19,7 +19,7 @@ export class CoursesComponent implements OnInit {
   }
 
   onDelete(id:number) : void {
-
+    
   }
 
 }
