@@ -12,7 +12,7 @@ import { MenuComponent } from './components/menu/menu.component';
 import { EditCourseComponent } from './components/edit-course/edit-course.component';
 import { DeleteCourseComponent } from './components/delete-course/delete-course.component';
 import { AddCourseComponent } from './components/add-course/add-course.component';
-
+import {HttpClientModule} from '@angular/common/http';
 
 const appRoutes:Routes = [
   {path:'', component:LoginComponent},
@@ -42,6 +42,8 @@ const appRoutes:Routes = [
     NgbModule,
     FormsModule,
     RouterModule.forRoot(appRoutes),
+    HttpClientModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

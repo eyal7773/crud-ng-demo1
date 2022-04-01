@@ -12,7 +12,9 @@ export class CoursesComponent implements OnInit {
   courses:Course[] = [];
 
   constructor(private coursesService:CoursesService) {
-    this.courses = this.coursesService.getCourses();
+     this.coursesService.getCourses().subscribe( (c) => {
+      this.courses = c;
+    });
    }
 
   ngOnInit(): void {
