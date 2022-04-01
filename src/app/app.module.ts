@@ -9,6 +9,9 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { CoursesComponent } from './components/courses/courses.component';
 import { FormsModule } from '@angular/forms';
 import { MenuComponent } from './components/menu/menu.component';
+import { EditCourseComponent } from './components/edit-course/edit-course.component';
+import { DeleteCourseComponent } from './components/delete-course/delete-course.component';
+import { AddCourseComponent } from './components/add-course/add-course.component';
 
 
 const appRoutes:Routes = [
@@ -16,6 +19,9 @@ const appRoutes:Routes = [
   {path:'login', component:LoginComponent},
   {path:'dashboard',component: DashboardComponent},
   {path:'courses',component: CoursesComponent},
+  {path:'courses/edit/:id',component: EditCourseComponent},
+  {path:'courses/delete/:id',component: DeleteCourseComponent},
+  {path:'courses/add',component: AddCourseComponent},
 
 ];
 
@@ -26,7 +32,9 @@ const appRoutes:Routes = [
     LoginComponent,
     DashboardComponent,
     CoursesComponent,
-    MenuComponent
+    MenuComponent,
+    DeleteCourseComponent,
+    AddCourseComponent
   ],
   imports: [
     BrowserModule,
