@@ -8,12 +8,15 @@ import { LoginComponent } from './components/login/login.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { CoursesComponent } from './components/courses/courses.component';
 import { FormsModule } from '@angular/forms';
+import { MenuComponent } from './components/menu/menu.component';
 
 
 const appRoutes:Routes = [
   {path:'', component:LoginComponent},
   {path:'login', component:LoginComponent},
   {path:'dashboard',component: DashboardComponent},
+  {path:'courses',component: CoursesComponent},
+
 ];
 
 
@@ -22,7 +25,8 @@ const appRoutes:Routes = [
     AppComponent,
     LoginComponent,
     DashboardComponent,
-    CoursesComponent
+    CoursesComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
