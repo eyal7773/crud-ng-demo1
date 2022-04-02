@@ -20,8 +20,5 @@ export class CoursesComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onDelete(id:number) : void {
-    
-  }
 
 }

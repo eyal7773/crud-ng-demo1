@@ -17,4 +17,21 @@ export class CoursesService {
   getCourses() : Observable<any> {
     return this._client.get<Observable<any>>(`${this.SERVER}/courses`);
   }
+
+  getSingleCourse(id:number) : Observable<any> {
+    return this._client.get<Observable<any>>(`${this.SERVER}/courses/${id}`);
+  }
+
+  deleteCourse(id:number) : Observable<any> {
+    return this._client.delete(`${this.SERVER}/courses/${id}`)
+  }
+
+  putCourse(id:number, course:Course) : Observable<any> {
+    return this._client.put(`${this.SERVER}/courses/${id}`,JSON.stringify(course));
+  }
+  
+  postCourse(course:Course) : Observable<any> {
+    return this._client.post(`${this.SERVER}/courses`,JSON.stringify(course));
+  }
+
 }
