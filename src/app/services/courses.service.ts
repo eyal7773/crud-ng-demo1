@@ -27,7 +27,6 @@ export class CoursesService {
   }
 
   putCourse(id:number, course:Course) : Observable<any> {
-    console.log(course);
     return this._client.put(`${this.SERVER}/courses/${id}`,course);
   }
   

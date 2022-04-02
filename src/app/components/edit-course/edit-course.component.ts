@@ -33,7 +33,10 @@ export class EditCourseComponent implements OnInit {
 
   }
 
-  onSubmit(value:any) {
+  onSubmit() {
+    
+    this.course.updatedAt = new Date();
+
     this.coursesService.putCourse(this.id, this.course).subscribe( (response) => {
       this.router.navigate(['courses']);
     })
