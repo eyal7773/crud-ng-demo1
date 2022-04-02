@@ -34,15 +34,16 @@ const appRoutes:Routes = [
     CoursesComponent,
     MenuComponent,
     DeleteCourseComponent,
-    AddCourseComponent
+    AddCourseComponent,
+    EditCourseComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    FormsModule,
     RouterModule.forRoot(appRoutes),
     HttpClientModule,
+    FormsModule,
     
   ],
   providers: [],

@@ -1,1 +1,74 @@
-<p>edit-course works!</p>
+<div class="row">
+    <div class="col-8 offset-2">
+        <h2>Edit Course </h2>
+        <form #f="ngForm" (ngSubmit)="onSubmit(f.value)" >
+            <!-- id:number;
+            name:string;
+            desc:string;
+            price:number;
+            updatedAt:Date;
+            isActive:boolean; -->
+            
+            <div class="mb-3">
+                <label for="id" class="form-label">Id</label>
+                <input disabled 
+                       type="text"
+                       class="form-control"
+                       ngModel  
+                       aria-describedby="id"
+                       [(ngModel)]="course.id"
+                       name="id"
+                       >
+            </div>
+            <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input 
+                    type="text"
+                    class="form-control"  
+                    aria-describedby="name" 
+                    ngModel 
+                    #name="ngModel"
+                    [(ngModel)]="course.name"
+                    required
+                    minlength="3"
+                    name="name"
+                    >
+                <div  class="form-text" *ngIf="name.invalid">
+                   Course name is required, and must be minimum 3 characters.
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="desc" class="form-label">Desciption</label>
+                <input 
+                    type="text"
+                    class="form-control"  
+                    aria-describedby="desc" 
+                    ngModel 
+                    [(ngModel)]="course.desc"
+                    name="desc"
+                    >
+            </div>
+            <div class="mb-3">
+                <label for="price" class="form-label">Price</label>
+                <input 
+                    type="number"
+                    class="form-control"  
+                    aria-describedby="price" 
+                    ngModel 
+                    required
+                    min="10"
+                    #price="ngModel"
+                    [(ngModel)]="course.price"
+                    name="price"
+                    >
+                <div  class="form-text"  *ngIf="price.invalid" >
+                    Price is required, and must be positive.
+                </div>
+            </div>
+
+            <button class="btn btn-primary">Save Course</button>
+
+
+        </form>        
+    </div>
+</div>

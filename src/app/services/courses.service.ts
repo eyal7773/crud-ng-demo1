@@ -27,11 +27,12 @@ export class CoursesService {
   }
 
   putCourse(id:number, course:Course) : Observable<any> {
-    return this._client.put(`${this.SERVER}/courses/${id}`,JSON.stringify(course));
+    console.log(course);
+    return this._client.put(`${this.SERVER}/courses/${id}`,course);
   }
   
   postCourse(course:Course) : Observable<any> {
-    return this._client.post(`${this.SERVER}/courses`,JSON.stringify(course));
+    return this._client.post(`${this.SERVER}/courses`,course);
   }
 
 }
