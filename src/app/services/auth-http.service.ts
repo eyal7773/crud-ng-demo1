@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class AuthService {
-
+  private readonly EMAIL_KEY = 'email';
   baseUrl:string = 'http://localhost:3000';
   
   constructor(private http: HttpClient) {   }
@@ -22,7 +22,7 @@ export class AuthService {
   }
 
   public isAuthenticated(): boolean {
-    const token = localStorage.getItem('token');
+    const token = localStorage.getItem(this.EMAIL_KEY);
     return (token !== null)
   }
 }
