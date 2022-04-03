@@ -1,4 +1,7 @@
 {
+  "users":[
+    { "id":1, "email":"abc@gmail.com", "password":"a12345" }
+  ],
   "courses": 
   [{"id":1,"name":"Tiertza","desc":"Subtalar fusion","price":2545,"updatedAt":"1642521141","isActive":true},
     {"id":2,"name":"Arlie","desc":"Internal drainage of pancreatic cyst","price":2133,"updatedAt":"1629477334","isActive":true},
