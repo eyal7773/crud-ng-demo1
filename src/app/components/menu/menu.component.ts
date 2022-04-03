@@ -16,7 +16,7 @@ export class MenuComponent implements OnInit {
 
   items:MenuItem[] = [];
   
-  constructor(private _authService:AuthService,
+  constructor(public _authService:AuthService,
               private _router:Router) { 
     this.setMenuItems();
   }

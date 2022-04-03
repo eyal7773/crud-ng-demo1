@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row" *ngIf="_authService.isAuthenticated()">
     <div class="col-12">
         <a *ngFor="let link of items" 
         class="btn btn-info  m-1" 
