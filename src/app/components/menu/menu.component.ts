@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthService } from 'src/app/services/auth-http.service';
 
 export interface MenuItem {
   title:string;
@@ -14,7 +16,8 @@ export class MenuComponent implements OnInit {
 
   items:MenuItem[] = [];
   
-  constructor() { 
+  constructor(private _authService:AuthService,
+              private _router:Router) { 
     this.setMenuItems();
   }
 
@@ -24,6 +27,11 @@ export class MenuComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  onLogout() {
+    this._authService.logout();
+    this._router.navigate(['']);
   }
 
 }

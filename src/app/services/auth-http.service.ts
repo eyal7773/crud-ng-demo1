@@ -25,5 +25,9 @@ export class AuthService {
     const token = localStorage.getItem(this.EMAIL_KEY);
     return (token !== null)
   }
+
+  public logout() {
+    localStorage.clear();
+  }
 }
 
